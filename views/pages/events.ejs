@@ -1,2 +1,56 @@
-<h1>Upcoming Events</h1>
-<p>Check out what's happening soon!</p>
+<%- include('../partials/header') %>
+
+<section class="events-hero mb-5">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="display-4 fw-bold mb-4">Community Events</h1>
+            <p class="lead">Discover upcoming events, worksops, and gatherings in our community</p>
+        </div>
+    </div>
+</section>
+<section class="events-filter mb-4">
+    <div class="container">
+        <div class="filter-box p-3 rounded bg-light">
+            <div class="row g-2 align-items-center">
+                <div class="col-md-3">
+                    <select class="form-select" id="category-filter">
+                        <option selected value="">All Categories</option>
+                        <option value="art">Art & Culture</option>
+                        <option value="tech">Technology</option>
+                        <option value="education">Education</option>
+                        <option value="music">Music</option>
+                        <option value="community">Community</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select" id="date-filter">
+                        <option selected value="">All Dates</option>
+                        <option value="today">Today</option>
+                        <option value="this-week">This Week</option>
+                        <option value="this-month">This Month</option>
+                        <option value="upcoming">Upcoming</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search events" aria-label="Search events">
+                        <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i> </button>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-primary w-100" id="apply-filters">Apply Filters</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="events-list">
+    <div class="container">
+        <div class="row g-4">
+            <!--Events data will be populated by the backend-->
+        </div>
+    </div>
+</section>
+
+<%- include('../partials/footer') %>
+
