@@ -38,10 +38,16 @@
             <div class="header-underline mx-auto"></div>
             <p class="text-muted">The dedicated people working behind the scenes</p>
         </div>
-        <di class="row g-4">
-            <!-- Team members will be populated here by the backend -->
-
-        </di>
+        <div class="row g-4">
+            <% team.forEach(teamMembers => { %>
+                <div class="col-md-4">
+                    <div class="team-card text-center p-4 border rounded shadow-sm">
+                        <h4 class="fw-bold"><%= teamMembers.name %></h4>
+                            <p class="text-muted"><%= teamMembers.role %></p>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
     </div>
 </section>
 <section class="values-section py-5">

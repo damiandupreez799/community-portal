@@ -4,9 +4,9 @@
 
 // Team members data for about page
 const teamMembers = [
-  { name: "Thapelo", role: "Frontend" },
+  { name: "Thapelo Mphahlele", role: "Frontend" },
   { name: "Andre Scholtz", role: "Backend" },
-  { name: "Damian", role: "Data Manager" }
+  { name: "Damian du Preez", role: "Data Manager" }
 ];
 
 // Events data for events page
@@ -30,6 +30,10 @@ const announcements = [
   { title: "Welcome!", content: "Welcome to the new portal!" },
   { title: "Next Event", content: "Next event announced!" }
 ];
+
+// Memory storage for the contact form submissions
+const contacts = [];
+
 // Exporting the data for use in other modules
 // This allows other parts of the application to import and use this data.
-module.exports = { teamMembers, events, announcements };
+module.exports = { teamMembers, events, announcements, contacts };
