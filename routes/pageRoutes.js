@@ -7,12 +7,12 @@ const contactMessages = [];// Array to store contact messages
 
 //home page
 router.get('/home', (req, res) => {
-    res.render('pages/home', { announcements });
+    res.render('pages/home', { announcements, title: 'Home' });
 });
 
 //about page
 router.get('/about', (req, res) => {
-    res.render("pages/about", { team: teamMembers });
+    res.render("pages/about", { team: teamMembers, title: 'About Us' });
 });
 //index page
 router.get('/', (req, res) => {
@@ -21,12 +21,12 @@ router.get('/', (req, res) => {
 
 //events page
 router.get('/events', (req, res) => {
-    res.render("pages/events", { events });
+    res.render("pages/events", { events, title: 'Events' });
 });
 
 // Show contact form
 router.get('/contact', (req, res) => {
-    res.render("pages/contact");
+    res.render("pages/contact", { title: 'Contact' });
 });
 
 // Handle contact form submission
@@ -38,7 +38,7 @@ router.post('/contact', (req, res) => {
 
 //thankyou page
 router.get('/thankyou', (req, res) => {
-    res.render("pages/thankyou");
+    res.render("pages/thankyou", { title: 'Thank You' });
 });
 
 module.exports = router;
