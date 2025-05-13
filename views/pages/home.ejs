@@ -1,1 +1,55 @@
-<h1>Welcome to the Community Portal</h1>
+<%- include('../partials/header') %>
+<section class="hero-section text-center py-5 mb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h1 class="display-4 fw-bold mb-4">Welcome to the Community Portal</h1>
+                <p class="leaad mb-4">Connecting people, sharing resources, and building a stronger community together.</p>
+                <a href="/events" class="btn btn-primary btn-lg px-4 gap-3">Explore Events</a>
+                <a href="/contact" class="btn btn-outline-secondary btn-lg px-4">Get in Touch</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="feature-section mb-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-calender-alt"></i>
+                    </div>
+                    <h3>Community Events</h3>
+                    <p>Discover local events, workshops, and gatherings designed to bring our community together.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Support & Resources</h3>
+                    <p>Access community resources and support systems designed to help everyone thrive.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="upcoming-events">
+    <div class="container">
+        <div class="section-header test-center mb-5">
+            <h2 class="display-6 fw-bold">Upcoming Events</h2>
+            <div class="header-underline"></div>
+            <p class="text-muted">Join us for our upcoming events and activities. We look forward to seeing you there!</p>
+        </div>
+        <div class="row g-4">
+            <!-- Populated by backend-->
+        </div>
+        <div class="text-center mt-4">
+            <a href="/events" class="btn btn-primary">View All Events</a>
+        </div>
+    </div>
+</section>
+
+<%- include('../partials/footer') %>
+
