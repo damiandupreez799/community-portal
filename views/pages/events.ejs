@@ -47,7 +47,16 @@
 <section class="events-list">
     <div class="container">
         <div class="row g-4">
-            <!--Events data will be populated by the backend-->
+            <% events.forEach(event => { %>
+                <div class="col-md-6 col-lg-4">
+                    <div class="event-card p-3 border rounded shadow-sm">
+                    <img src="<%= event.image %>" alt="<%= event.title %>" class="img-fluid mb-3 rounded">
+                    <h5 class="fw-bold"><%= event.title %></h5>
+                    <p><strong>Date:</strong> <%= event.date %></p>
+                    <p><strong>Location:</strong> <%= event.location %></p>
+                    </div>
+                </div>
+            <%})%>
         </div>
     </div>
 </section>
