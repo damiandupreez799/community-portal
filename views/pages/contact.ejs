@@ -1,7 +1,67 @@
-<h1>Contact Us</h1>
-<form method="POST" action="/contact">
-  <input type="text" name="name" placeholder="Your Name" required /><br />
-  <input type="email" name="email" placeholder="Your Email" required /><br />
-  <textarea name="message" placeholder="Your Message" required></textarea><br />
-  <button type="submit">Send</button>
-</form>
+<%- include('../partials/header') %>
+
+<div class="container contact-conatiner">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="contact-card">
+        <h1 class="text-center mb-4">Contact Us</h1>
+        <p class="text-center mb-4">Have questions or suggestions? Fill out the form below and we'll get back to you as soon as possible.</p>
+        <form action="/contact" method="POST" class="contact-form needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+            <div class="invalid-feedback">
+              Please enter your name.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="example@gmail.com" required>
+            <div class="invalid-feedback">
+              Please enter a valid email address.
+            </div>
+          </div>
+          <div class="mb-4">
+            <label for="message" class="form-label">Message</label>
+            <textarea type="text" class="form-control" id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+            <div class="invalid-feedback">
+              Please enter your message.
+            </div>
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+          </div>
+        </form>
+      </div>
+      <div class="constact-info mt-5">
+        <div class="row">
+          <div class="col-md-4 text-center mb-3 mb-md-0">
+            <div class="constact-info-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <h5>Location</h5>
+              <p>123 Community St, City, State, 12345</p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center mb-3 mb-md-0">
+            <div class="constact-info-item">
+              <i class="bi bi-evenlope-fill"></i>
+              <h5>Email</h5>
+              <p>info@communityportal.co.za</p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="constact-info-item">
+              <i class="bi bi-telephone-fill"></i>
+              <h5>Phone</h5>
+              <p>(123) 456-7890</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Form validation-->  
+
+<%- include('../partials/footer') %>
