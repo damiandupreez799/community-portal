@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { teamMembers, events, announcements } = require('../data/data');// Importing data arrays for use in route handlers
-const contactMessages = [];// Array to store contact messages
+
+const { teamMembers, events, announcements, contacts} = require('../data/data');// Importing data arrays for use in route handlers
 
 // Set up the router to handle requests to the root URL
 
@@ -32,8 +32,16 @@ router.get('/contact', (req, res) => {
 // Handle contact form submission
 router.post('/contact', (req, res) => {
     const { name, email, message } = req.body;
-    contactMessages.push({ name, email, message, timestamp: new Date() });
-    res.redirect('/thankyou');
+
+    if (name && email && message) {
+        contacts.push({ name, email, message, timestamp: new Date() });
+        console.log("New contact submission:", contacts);
+        res.render('pages/thankyou', {
+            submission: { name, email, message }
+        });
+    } else {
+        res.status(400).send("All fields are required.");
+    }
 });
 
 //thankyou page
